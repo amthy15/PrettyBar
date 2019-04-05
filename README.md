@@ -13,3 +13,4 @@ See [here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-w
 - 2019-04-05:
     - Added README.md
     - Created Dev Branch
+    - Setup Environment

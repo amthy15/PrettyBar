@@ -2,7 +2,7 @@
   "name": "prettybar",
   "version": "1.0.0",
   "description": "### Dev Rules",
-  "main": "index.js",
+  "main": "public/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development"
   },

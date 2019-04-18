@@ -1,4 +1,17 @@
-.App {
-  margin: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+body{
+    margin: 0;
+    height: 100vh;
+    line-height: 20px;
+    font-size: 14px;
+}
+#root .App {
+    font-family: Inconsolata, Arial, Helvetica, sans-serif;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #001115;
 }

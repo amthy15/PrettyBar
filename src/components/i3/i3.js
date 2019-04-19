@@ -19,7 +19,7 @@ class I3 extends React.Component{
 		};
 	}
 	componentDidMount(){
-		called when component mounts.
+		// called when component mounts.
 		exec('i3 --get-socket').then(stdout => {
 			this.setState({
 				socket: stdout

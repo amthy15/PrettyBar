@@ -10,11 +10,13 @@ import "./App.css";
 // Supporting components
 import Clock from "./components/clock/clock.js";
 import Separator from "./components/separator/separator.js";
+import Separator from "./components/i3/i3.js";
 
 class App extends Component {
     render(){
         return(
             <div className="App">
+                <I3/>
                 <Separator/>
                 <Clock/>
             </div>

@@ -32,6 +32,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "i3": "^0.2.1",
     "node-ipc": "^9.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

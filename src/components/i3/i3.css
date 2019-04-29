@@ -1,3 +1,11 @@
 .I3{
 
 }
+
+.I3 .workspace{
+	margin: 0 4px;
+}
+
+.I3 .workspace.focused{
+	color: cyan;
+}

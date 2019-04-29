@@ -33,6 +33,7 @@ module.exports = {
     plugins: [new webpack.HotModuleReplacementPlugin()],
     externals: {
         child_process: 'commonjs child_process',
-        'node-ipc': 'commonjs node-ipc'
+        'node-ipc': 'commonjs node-ipc',
+        i3: 'commonjs i3'
     }
 };

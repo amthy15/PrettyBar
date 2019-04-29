@@ -28,8 +28,10 @@ class I3 extends React.Component{
 	// When this component is ready, do some startup.
 	componentDidMount(){
 		const i3 = require('i3').createClient();
-		i3.command('move container to workspace 5');
-		i3.command('workspace 5');
+		// In development, I run the app as a full window.
+		// These lines move the window to my desktop of choice.
+		// i3.command('move container to workspace 5');
+		// i3.command('workspace 5');
 		i3.on('workspace', this.makeBound(this, this.handleWorkspaceEvent));
 		i3.workspaces((err, workspaces)=>{
 			console.log(workspaces);
@@ -95,16 +97,19 @@ class I3 extends React.Component{
 		if(!this.state.workspaces){
 			return (<span>Workspaces Undefined - Startup or Error</span>)
 		}
-		let result = this.state.workspaces.sort((a,b) => {a.num - b.num}).map( workspace => {
-			let classes = ['workspace'];
-			if(workspace.focused)
-				classes.push('focused');
-			return (
-				<span className={classes.join(' ')} key={workspace.name}>
-					{workspace.name}
-				</span>
-			);
-		});
+		let result = []
+			.concat(this.state.workspaces)
+			.sort((a,b) => {return a.num - b.num})
+			.map( workspace => {
+				let classes = ['workspace'];
+				if(workspace.focused)
+					classes.push('focused');
+				return (
+					<span className={classes.join(' ')} key={workspace.name}>
+						{workspace.name}
+					</span>
+				);
+			});
 		return (
 			<span className="I3">
 				{result}
